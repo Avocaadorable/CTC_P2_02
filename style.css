@@ -1,0 +1,75 @@
+/* Basic reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Static image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Interactive container for images */
+.interactive-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Image container styling */
+.image-container {
+    width: 150px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Center display (modal) styling */
+.center-display {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.center-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.center-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.center-content h2, .center-content h3, .center-content p {
+    margin: 10px 0;
+}
+
+.fixed-top.bar {
+    position: fixed; /* This makes the element positioned relative to the viewport, which means it will stay in the same place even when the page is scrolled */
+    top: 0; /* Align the top edge of the element with the top of the viewport */
+    z-index: 1000; /* Ensures the image stays on top of other content */
+    width: 100%; /* Optional: Adjust this as needed to fit your design */
+}
