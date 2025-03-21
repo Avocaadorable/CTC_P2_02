@@ -1,4 +1,3 @@
-// Wait for the document to fully load before executing the script
 document.addEventListener('DOMContentLoaded', () => {
     // Google Sheets API details
     const SHEET_ID = '15DWgul-u3bOtXjon6XBbFCdlp2ob1kXUTvTzwBtDVdE'; // Spreadsheet ID
@@ -104,5 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
         centerBody.textContent = container.getAttribute('data-description');
 
         centerDisplay.style.display = 'flex';
+
+        // Add event listener to close the modal when clicking outside of the content
+        centerDisplay.addEventListener('click', (event) => {
+            if (event.target === centerDisplay) {
+                centerDisplay.style.display = 'none';
+            }
+        });
     }
 });
